@@ -45,7 +45,7 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
 
 @interface JMSwipeCell ()
 
-@property (weak, nonatomic) UIPanGestureRecognizer *panGesture;
+@property (assign, nonatomic) UIPanGestureRecognizer *panGesture;
 @property (assign, nonatomic) JMSwipeDirection direction;
 @property (assign, nonatomic) CGFloat currentPercentage;
 
