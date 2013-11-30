@@ -1,5 +1,5 @@
 //
-//  JMViewController.h
+//  JMTableViewController.h
 //  JMSwipeTableViewCell
 //
 //  Created by Justin Makaila on 11/29/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMViewController : UIViewController
+@interface JMTableViewController : UITableViewController
 
 @end
