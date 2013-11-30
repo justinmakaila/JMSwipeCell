@@ -43,11 +43,12 @@ static NSTimeInterval const kMCDurationLowLimit = 0.25;
  */
 static NSTimeInterval const kMCDurationHighLimit = 0.1;
 
-@interface JMSwipeCell ()
+@interface JMSwipeCell () {
+    JMSwipeDirection direction;
+    CGFloat currentPercentage;
+}
 
-@property (assign, nonatomic) UIPanGestureRecognizer *panGesture;
-@property (assign, nonatomic) JMSwipeDirection direction;
-@property (assign, nonatomic) CGFloat currentPercentage;
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 
 @end
 
@@ -97,8 +98,8 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
     
     self.editable = NO;
     self.dragging = NO;
-    self.direction = kJMSwipeDirectionCenter;
-    self.currentPercentage = 0;
+    direction = kJMSwipeDirectionCenter;
+    currentPercentage = 0;
 }
 
 #pragma mark - Utils
@@ -162,12 +163,12 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
     CGPoint translation = [gesture translationInView:self.contentView];
     CGPoint velocity = [gesture velocityInView:self.contentView];
     CGFloat percentage = [self percentageWithOffset:CGRectGetMinX(self.contentView.frame) relativeToDimension:CGRectGetWidth(self.bounds)];
-    self.direction = [self directionWithPercentage:percentage];
+    direction = [self directionWithPercentage:percentage];
     
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
         self.dragging = YES;
         
-        if ((self.direction == kJMSwipeDirectionCenter || self.direction == kJMSwipeDirectionRight) && (velocity.x > 0 && self.contentView.center.x >= self.center.x)) {
+        if ((direction == kJMSwipeDirectionCenter || direction == kJMSwipeDirectionRight) && (velocity.x > 0 && self.contentView.center.x >= self.center.x)) {
             return;
         }
         
@@ -178,9 +179,9 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
     }else if (state == UIGestureRecognizerStateEnded || state == UIGestureRecognizerStateEnded) {
         self.dragging = NO;
         
-        self.currentPercentage = percentage;
+        currentPercentage = percentage;
         
-        if (self.direction == kJMSwipeDirectionLeft && self.contentView.center.x < self.center.x) {
+        if (direction == kJMSwipeDirectionLeft && self.contentView.center.x < self.center.x) {
             [self animateToDelete];
         }else {
             [self bounceToOrigin];
@@ -191,7 +192,7 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
 #pragma mark - Animations
 
 -(void)bounceToOrigin {
-    CGFloat bounceDistance = kBounceAmplitude * self.currentPercentage;
+    CGFloat bounceDistance = kBounceAmplitude * currentPercentage;
     [UIView animateWithDuration:kBounceDuration1
                           delay:0
                         options:UIViewAnimationOptionCurveLinear
