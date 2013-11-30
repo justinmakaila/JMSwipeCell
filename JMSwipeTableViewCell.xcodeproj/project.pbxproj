@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FAFBAF7184963D9001CBFCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBAF6184963D9001CBFCC /* Foundation.framework */; };
+		5FAFBAF9184963D9001CBFCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBAF8184963D9001CBFCC /* CoreGraphics.framework */; };
+		5FAFBAFB184963D9001CBFCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBAFA184963D9001CBFCC /* UIKit.framework */; };
+		5FAFBB01184963DA001CBFCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FAFBAFF184963DA001CBFCC /* InfoPlist.strings */; };
+		5FAFBB03184963DA001CBFCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAFBB02184963DA001CBFCC /* main.m */; };
+		5FAFBB07184963DA001CBFCC /* JMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAFBB06184963DA001CBFCC /* JMAppDelegate.m */; };
+		5FAFBB0A184963DA001CBFCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAFBB08184963DA001CBFCC /* Main.storyboard */; };
+		5FAFBB0D184963DA001CBFCC /* JMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAFBB0C184963DA001CBFCC /* JMViewController.m */; };
+		5FAFBB0F184963DA001CBFCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAFBB0E184963DA001CBFCC /* Images.xcassets */; };
+		5FAFBB16184963DA001CBFCC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBB15184963DA001CBFCC /* XCTest.framework */; };
+		5FAFBB17184963DA001CBFCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBAF6184963D9001CBFCC /* Foundation.framework */; };
+		5FAFBB18184963DA001CBFCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FAFBAFA184963D9001CBFCC /* UIKit.framework */; };
+		5FAFBB20184963DA001CBFCC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FAFBB1E184963DA001CBFCC /* InfoPlist.strings */; };
+		5FAFBB22184963DA001CBFCC /* JMSwipeTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FAFBB21184963DA001CBFCC /* JMSwipeTableViewCellTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FAFBB19184963DA001CBFCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FAFBAEB184963D9001CBFCC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FAFBAF2184963D9001CBFCC;
+			remoteInfo = JMSwipeTableViewCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5FAFBAF3184963D9001CBFCC /* JMSwipeTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMSwipeTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FAFBAF6184963D9001CBFCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5FAFBAF8184963D9001CBFCC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5FAFBAFA184963D9001CBFCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5FAFBAFE184963DA001CBFCC /* JMSwipeTableViewCell-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JMSwipeTableViewCell-Info.plist"; sourceTree = "<group>"; };
+		5FAFBB00184963DA001CBFCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FAFBB02184963DA001CBFCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5FAFBB04184963DA001CBFCC /* JMSwipeTableViewCell-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JMSwipeTableViewCell-Prefix.pch"; sourceTree = "<group>"; };
+		5FAFBB05184963DA001CBFCC /* JMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMAppDelegate.h; sourceTree = "<group>"; };
+		5FAFBB06184963DA001CBFCC /* JMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMAppDelegate.m; sourceTree = "<group>"; };
+		5FAFBB09184963DA001CBFCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FAFBB0B184963DA001CBFCC /* JMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMViewController.h; sourceTree = "<group>"; };
+		5FAFBB0C184963DA001CBFCC /* JMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMViewController.m; sourceTree = "<group>"; };
+		5FAFBB0E184963DA001CBFCC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5FAFBB14184963DA001CBFCC /* JMSwipeTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMSwipeTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FAFBB15184963DA001CBFCC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5FAFBB1D184963DA001CBFCC /* JMSwipeTableViewCellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JMSwipeTableViewCellTests-Info.plist"; sourceTree = "<group>"; };
+		5FAFBB1F184963DA001CBFCC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5FAFBB21184963DA001CBFCC /* JMSwipeTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMSwipeTableViewCellTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FAFBAF0184963D9001CBFCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBAF9184963D9001CBFCC /* CoreGraphics.framework in Frameworks */,
+				5FAFBAFB184963D9001CBFCC /* UIKit.framework in Frameworks */,
+				5FAFBAF7184963D9001CBFCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FAFBB11184963DA001CBFCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBB16184963DA001CBFCC /* XCTest.framework in Frameworks */,
+				5FAFBB18184963DA001CBFCC /* UIKit.framework in Frameworks */,
+				5FAFBB17184963DA001CBFCC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5FAFBAEA184963D9001CBFCC = {
+			isa = PBXGroup;
+			children = (
+				5FAFBAFC184963D9001CBFCC /* JMSwipeTableViewCell */,
+				5FAFBB1B184963DA001CBFCC /* JMSwipeTableViewCellTests */,
+				5FAFBAF5184963D9001CBFCC /* Frameworks */,
+				5FAFBAF4184963D9001CBFCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FAFBAF4184963D9001CBFCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBAF3184963D9001CBFCC /* JMSwipeTableViewCell.app */,
+				5FAFBB14184963DA001CBFCC /* JMSwipeTableViewCellTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FAFBAF5184963D9001CBFCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBAF6184963D9001CBFCC /* Foundation.framework */,
+				5FAFBAF8184963D9001CBFCC /* CoreGraphics.framework */,
+				5FAFBAFA184963D9001CBFCC /* UIKit.framework */,
+				5FAFBB15184963DA001CBFCC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FAFBAFC184963D9001CBFCC /* JMSwipeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBB05184963DA001CBFCC /* JMAppDelegate.h */,
+				5FAFBB06184963DA001CBFCC /* JMAppDelegate.m */,
+				5FAFBB08184963DA001CBFCC /* Main.storyboard */,
+				5FAFBB0B184963DA001CBFCC /* JMViewController.h */,
+				5FAFBB0C184963DA001CBFCC /* JMViewController.m */,
+				5FAFBB0E184963DA001CBFCC /* Images.xcassets */,
+				5FAFBAFD184963DA001CBFCC /* Supporting Files */,
+			);
+			path = JMSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		5FAFBAFD184963DA001CBFCC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBAFE184963DA001CBFCC /* JMSwipeTableViewCell-Info.plist */,
+				5FAFBAFF184963DA001CBFCC /* InfoPlist.strings */,
+				5FAFBB02184963DA001CBFCC /* main.m */,
+				5FAFBB04184963DA001CBFCC /* JMSwipeTableViewCell-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FAFBB1B184963DA001CBFCC /* JMSwipeTableViewCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBB21184963DA001CBFCC /* JMSwipeTableViewCellTests.m */,
+				5FAFBB1C184963DA001CBFCC /* Supporting Files */,
+			);
+			path = JMSwipeTableViewCellTests;
+			sourceTree = "<group>";
+		};
+		5FAFBB1C184963DA001CBFCC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FAFBB1D184963DA001CBFCC /* JMSwipeTableViewCellTests-Info.plist */,
+				5FAFBB1E184963DA001CBFCC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FAFBAF2184963D9001CBFCC /* JMSwipeTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FAFBB25184963DA001CBFCC /* Build configuration list for PBXNativeTarget "JMSwipeTableViewCell" */;
+			buildPhases = (
+				5FAFBAEF184963D9001CBFCC /* Sources */,
+				5FAFBAF0184963D9001CBFCC /* Frameworks */,
+				5FAFBAF1184963D9001CBFCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMSwipeTableViewCell;
+			productName = JMSwipeTableViewCell;
+			productReference = 5FAFBAF3184963D9001CBFCC /* JMSwipeTableViewCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FAFBB13184963DA001CBFCC /* JMSwipeTableViewCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FAFBB28184963DA001CBFCC /* Build configuration list for PBXNativeTarget "JMSwipeTableViewCellTests" */;
+			buildPhases = (
+				5FAFBB10184963DA001CBFCC /* Sources */,
+				5FAFBB11184963DA001CBFCC /* Frameworks */,
+				5FAFBB12184963DA001CBFCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FAFBB1A184963DA001CBFCC /* PBXTargetDependency */,
+			);
+			name = JMSwipeTableViewCellTests;
+			productName = JMSwipeTableViewCellTests;
+			productReference = 5FAFBB14184963DA001CBFCC /* JMSwipeTableViewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FAFBAEB184963D9001CBFCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Justin Makaila";
+				TargetAttributes = {
+					5FAFBB13184963DA001CBFCC = {
+						TestTargetID = 5FAFBAF2184963D9001CBFCC;
+					};
+				};
+			};
+			buildConfigurationList = 5FAFBAEE184963D9001CBFCC /* Build configuration list for PBXProject "JMSwipeTableViewCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FAFBAEA184963D9001CBFCC;
+			productRefGroup = 5FAFBAF4184963D9001CBFCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FAFBAF2184963D9001CBFCC /* JMSwipeTableViewCell */,
+				5FAFBB13184963DA001CBFCC /* JMSwipeTableViewCellTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FAFBAF1184963D9001CBFCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBB0F184963DA001CBFCC /* Images.xcassets in Resources */,
+				5FAFBB01184963DA001CBFCC /* InfoPlist.strings in Resources */,
+				5FAFBB0A184963DA001CBFCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FAFBB12184963DA001CBFCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBB20184963DA001CBFCC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FAFBAEF184963D9001CBFCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBB03184963DA001CBFCC /* main.m in Sources */,
+				5FAFBB0D184963DA001CBFCC /* JMViewController.m in Sources */,
+				5FAFBB07184963DA001CBFCC /* JMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FAFBB10184963DA001CBFCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FAFBB22184963DA001CBFCC /* JMSwipeTableViewCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FAFBB1A184963DA001CBFCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FAFBAF2184963D9001CBFCC /* JMSwipeTableViewCell */;
+			targetProxy = 5FAFBB19184963DA001CBFCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FAFBAFF184963DA001CBFCC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FAFBB00184963DA001CBFCC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5FAFBB08184963DA001CBFCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FAFBB09184963DA001CBFCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FAFBB1E184963DA001CBFCC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FAFBB1F184963DA001CBFCC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FAFBB23184963DA001CBFCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5FAFBB24184963DA001CBFCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FAFBB26184963DA001CBFCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSwipeTableViewCell/JMSwipeTableViewCell-Prefix.pch";
+				INFOPLIST_FILE = "JMSwipeTableViewCell/JMSwipeTableViewCell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5FAFBB27184963DA001CBFCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSwipeTableViewCell/JMSwipeTableViewCell-Prefix.pch";
+				INFOPLIST_FILE = "JMSwipeTableViewCell/JMSwipeTableViewCell-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5FAFBB29184963DA001CBFCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JMSwipeTableViewCell.app/JMSwipeTableViewCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSwipeTableViewCell/JMSwipeTableViewCell-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JMSwipeTableViewCellTests/JMSwipeTableViewCellTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5FAFBB2A184963DA001CBFCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JMSwipeTableViewCell.app/JMSwipeTableViewCell";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JMSwipeTableViewCell/JMSwipeTableViewCell-Prefix.pch";
+				INFOPLIST_FILE = "JMSwipeTableViewCellTests/JMSwipeTableViewCellTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FAFBAEE184963D9001CBFCC /* Build configuration list for PBXProject "JMSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FAFBB23184963DA001CBFCC /* Debug */,
+				5FAFBB24184963DA001CBFCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FAFBB25184963DA001CBFCC /* Build configuration list for PBXNativeTarget "JMSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FAFBB26184963DA001CBFCC /* Debug */,
+				5FAFBB27184963DA001CBFCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5FAFBB28184963DA001CBFCC /* Build configuration list for PBXNativeTarget "JMSwipeTableViewCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FAFBB29184963DA001CBFCC /* Debug */,
+				5FAFBB2A184963DA001CBFCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FAFBAEB184963D9001CBFCC /* Project object */;
+}
