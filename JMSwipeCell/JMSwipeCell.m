@@ -36,18 +36,31 @@ static NSTimeInterval const kBounceDuration2 = 0.1;
 /**
  *  Lowest duration when swiping the cell to simulate velocity
  */
-static NSTimeInterval const kMCDurationLowLimit = 0.25;
+static NSTimeInterval const kJMDurationLowLimit = 0.25;
 
 /**
  *  Highest duration when swiping the cell to simulate velocity
  */
-static NSTimeInterval const kMCDurationHighLimit = 0.1;
+static NSTimeInterval const kJMDurationHighLimit = 0.1;
 
+/**
+ *  Interface declaration for JMSwipeCell
+ */
 @interface JMSwipeCell () {
+    /**
+     *  Current swipe direction
+     */
     JMSwipeDirection direction;
+    
+    /**
+     *  Current percentage dragged
+     */
     CGFloat currentPercentage;
 }
 
+/**
+ *  The pan gesture to detect swipes
+ */
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 
 @end
@@ -85,6 +98,7 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
     self.deleteButton.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.deleteButton.backgroundColor = [UIColor redColor];
     [self.deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
+    [self.deleteButton addTarget:self action:@selector(deleteButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self insertSubview:self.deleteButton atIndex:0];
     
     [self prepareForReuse];
@@ -118,7 +132,7 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
 
 - (NSTimeInterval)animationDurationWithVelocity:(CGPoint)velocity {
     CGFloat height = CGRectGetHeight(self.bounds);
-    NSTimeInterval animationDurationDiff = kMCDurationHighLimit - kMCDurationLowLimit;
+    NSTimeInterval animationDurationDiff = kJMDurationHighLimit - kJMDurationLowLimit;
     CGFloat verticalVelocity = velocity.y;
     
     if (verticalVelocity < -height) {
@@ -127,19 +141,24 @@ static NSTimeInterval const kMCDurationHighLimit = 0.1;
         verticalVelocity = height;
     }
     
-    return (kMCDurationHighLimit + kMCDurationLowLimit) - fabs(((verticalVelocity / height) * animationDurationDiff));
+    return (kJMDurationHighLimit + kJMDurationLowLimit) - fabs(((verticalVelocity / height) * animationDurationDiff));
 }
 
 - (JMSwipeDirection)directionWithPercentage:(CGFloat)percentage {
     if (percentage < -kMCStop1) {
-        NSLog(@"Left");
         return kJMSwipeDirectionLeft;
     }else if (percentage > kMCStop2) {
-        NSLog(@"Right");
         return kJMSwipeDirectionRight;
     }else {
-        NSLog(@"Center");
         return kJMSwipeDirectionCenter;
+    }
+}
+
+#pragma mark - Button Actions
+
+- (void)deleteButtonPressed:(UIButton*)sender {
+    if ([_delegate respondsToSelector:@selector(deletePressedAtIndex:)]) {
+        [_delegate deletePressedAtIndex:self.tag];
     }
 }
 

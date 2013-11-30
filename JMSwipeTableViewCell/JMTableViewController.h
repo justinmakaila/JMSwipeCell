@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMSwipeCell.h"
 
-@interface JMTableViewController : UITableViewController
+@interface JMTableViewController : UITableViewController <JMSwipeCellDelegate>
 
 @end
