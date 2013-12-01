@@ -70,24 +70,31 @@ static NSTimeInterval const kJMDurationHighLimit = 0.1;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self baseInit];
+        [self initializer];
     }
+    
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initializer];
+    }
+    
     return self;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
-        [self baseInit];
+        [self initializer];
     }
     
     return self;
 }
 
-- (void)baseInit {
-    self.backgroundColor = [UIColor whiteColor];
-    self.contentView.backgroundColor = [UIColor whiteColor];
-    
+- (void)initializer {
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panReceived:)];
     panGesture.delegate = self;
     self.panGesture = panGesture;
@@ -105,6 +112,8 @@ static NSTimeInterval const kJMDurationHighLimit = 0.1;
 }
 
 - (void)prepareForReuse {
+    self.backgroundColor = [UIColor whiteColor];
+    self.contentView.backgroundColor = [UIColor whiteColor];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     self.textLabel.numberOfLines = 0;

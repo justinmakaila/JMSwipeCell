@@ -24,11 +24,6 @@ typedef enum {
 
 @property (unsafe_unretained) id<JMSwipeCellDelegate> delegate;
 
-@property (strong, nonatomic) UILabel *label;
-
-@property (strong, nonatomic) UIView *cellContent;
-@property (strong, nonatomic) UIImageView *pictureView;
-
 @property (strong, nonatomic) UIButton *deleteButton;
 
 @property (nonatomic, getter = isDragging) BOOL dragging;
