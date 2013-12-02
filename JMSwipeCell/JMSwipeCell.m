@@ -11,12 +11,12 @@
 /**
  *  Percentage limit to trigger the first action
  */
-static CGFloat const kMCStop1 = 0.2;
+static CGFloat const kJMStop1 = 0.2;
 
 /**
  *  Percentage limit to trigger the second action
  */
-static CGFloat const kMCStop2 = 0.000001;
+static CGFloat const kJMStop2 = 0.000001;
 
 /**
  *  Maximum bounce amplitude
@@ -154,9 +154,9 @@ static NSTimeInterval const kJMDurationHighLimit = 0.1;
 }
 
 - (JMSwipeDirection)directionWithPercentage:(CGFloat)percentage {
-    if (percentage < -kMCStop1) {
+    if (percentage < -kJMStop1) {
         return kJMSwipeDirectionLeft;
-    }else if (percentage > kMCStop2) {
+    }else if (percentage > kJMStop2) {
         return kJMSwipeDirectionRight;
     }else {
         return kJMSwipeDirectionCenter;
