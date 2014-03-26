@@ -94,6 +94,11 @@ static NSTimeInterval const kJMDurationHighLimit = 0.1;
     return self;
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self initializer];
+}
+
 - (void)initializer {
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panReceived:)];
     panGesture.delegate = self;
